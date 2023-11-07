@@ -1,6 +1,6 @@
 # Time Scaler Operator
 
-A simple Kubernetes operator made using the operator-sdk framework.
+A simple Kubernetes operator made using the `operator-sdk` framework.
 
 This operator allows you to define a `TimeScale` custom resource that enables time-based scaling of your deployments.
 ```
