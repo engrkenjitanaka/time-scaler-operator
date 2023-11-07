@@ -1,0 +1,27 @@
+# permissions for end users to view timescalers.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: timescaler-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: time-scaler-operator
+    app.kubernetes.io/part-of: time-scaler-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: timescaler-viewer-role
+rules:
+- apiGroups:
+  - api.engineerkenji.com
+  resources:
+  - timescalers
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - api.engineerkenji.com
+  resources:
+  - timescalers/status
+  verbs:
+  - get
